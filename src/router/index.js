@@ -1,15 +1,33 @@
 // router/index.js
-import { createRouter, createMemoryHistory } from 'vue-router'
+import { createRouter, createMemoryHistory, createWebHistory } from 'vue-router'
 import HomeView from '../components/Home.vue'
 import AboutView from '../components/AboutView.vue'
+import Users from '../components/Users.vue'
+import UserDetail from '../components/UserDetail.vue'
 
 export const menuRoutes = [
-  { path: '/', component: HomeView, meta: { title: 'Trang chủ' } },
-  { path: '/about', component: AboutView, meta: { title: 'Giới thiệu' } },
+  { 
+    path: '/dashboard', 
+    name: 'dashboard.view',
+    component: HomeView,
+    meta: { title: 'Dashboard' } 
+  },
+  { 
+    path: '/users', 
+    name: 'dashboard.view',
+    component: () => import('@/components/Users.vue'), 
+    meta: { title: 'Thành viên' } 
+  },
+  { 
+    path: '/users/:id', 
+    name: 'users.show', 
+    component: () => import('@/components/UserDetail.vue'), 
+    meta: { title: 'Thông tin thành viên' } 
+  },
 ]
 
 const router = createRouter({
-  history: createMemoryHistory(),
+  history: createWebHistory(),
   routes: menuRoutes,
 })
 

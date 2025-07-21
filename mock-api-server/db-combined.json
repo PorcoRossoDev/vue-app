@@ -1,116 +1,22 @@
 {
-  "permissions": {
-    "users": [
-      {
-        "action": "view",
-        "name": "VIEW users"
-      },
-      {
-        "action": "view_detail",
-        "name": "VIEW_DETAIL users"
-      },
-      {
-        "action": "create",
-        "name": "CREATE users"
-      },
-      {
-        "action": "update",
-        "name": "UPDATE users"
-      },
-      {
-        "action": "delete",
-        "name": "DELETE users"
-      }
-    ],
-    "roles": [
-      {
-        "action": "view",
-        "name": "VIEW roles"
-      },
-      {
-        "action": "view_detail",
-        "name": "VIEW_DETAIL roles"
-      },
-      {
-        "action": "create",
-        "name": "CREATE roles"
-      },
-      {
-        "action": "update",
-        "name": "UPDATE roles"
-      },
-      {
-        "action": "delete",
-        "name": "DELETE roles"
-      }
-    ],
-    "permissions": [
-      {
-        "action": "view",
-        "name": "VIEW permissions"
-      },
-      {
-        "action": "view_detail",
-        "name": "VIEW_DETAIL permissions"
-      },
-      {
-        "action": "create",
-        "name": "CREATE permissions"
-      },
-      {
-        "action": "update",
-        "name": "UPDATE permissions"
-      },
-      {
-        "action": "delete",
-        "name": "DELETE permissions"
-      }
-    ],
-    "products": [
-      {
-        "action": "view",
-        "name": "VIEW products"
-      },
-      {
-        "action": "view_detail",
-        "name": "VIEW_DETAIL products"
-      },
-      {
-        "action": "create",
-        "name": "CREATE products"
-      },
-      {
-        "action": "update",
-        "name": "UPDATE products"
-      },
-      {
-        "action": "delete",
-        "name": "DELETE products"
-      }
-    ],
-    "posts": [
-      {
-        "action": "view",
-        "name": "VIEW posts"
-      },
-      {
-        "action": "view_detail",
-        "name": "VIEW_DETAIL posts"
-      },
-      {
-        "action": "create",
-        "name": "CREATE posts"
-      },
-      {
-        "action": "update",
-        "name": "UPDATE posts"
-      },
-      {
-        "action": "delete",
-        "name": "DELETE posts"
-      }
-    ]
-  },
+  "permissions": [
+    {
+      "id": 1,
+      "name": "view_users"
+    },
+    {
+      "id": 2,
+      "name": "edit_users"
+    },
+    {
+      "id": 3,
+      "name": "delete_users"
+    },
+    {
+      "id": 4,
+      "name": "create_posts"
+    }
+  ],
   "posts": [
     {
       "id": 1,
@@ -140,70 +46,78 @@
   "roles": [
     {
       "id": 1,
-      "name": "Admin",
-      "description": "Quản trị toàn bộ hệ thống"
+      "name": "admin",
+      "permissions": [
+        1,
+        2
+      ]
     },
     {
       "id": 2,
-      "name": "Editor",
-      "description": "Chỉnh sửa nội dung"
+      "name": "user",
+      "permissions": [
+        1
+      ]
     },
     {
       "id": 3,
-      "name": "Viewer",
-      "description": "Chỉ xem nội dung"
+      "name": "editor",
+      "permissions": [
+        1,
+        4
+      ]
     }
   ],
-  "routes": {
-    "admin": [
-      {
-        "name": "Dashboard",
-        "path": "/dashboard"
-      },
-      {
-        "name": "Users",
-        "path": "/users"
-      },
-      {
-        "name": "Settings",
-        "path": "/settings"
-      }
-    ],
-    "editor": [
-      {
-        "name": "Dashboard",
-        "path": "/dashboard"
-      },
-      {
-        "name": "Posts",
-        "path": "/posts"
-      }
-    ],
-    "viewer": [
-      {
-        "name": "Dashboard",
-        "path": "/dashboard"
-      }
-    ]
-  },
+  "routes": [
+    {
+      "id": 1,
+      "name": "Dashboard",
+      "path": "/dashboard",
+      "component": "Dashboard",
+      "permission": "view_users"
+    },
+    {
+      "id": 2,
+      "name": "Users",
+      "path": "/users",
+      "component": "Users",
+      "permission": "view_users"
+    }
+  ],
   "users": [
     {
       "id": 1,
-      "username": "admin",
+      "name": "Nguyễn Văn A",
+      "email": "admin@example.com",
       "password": "admin123",
-      "role": "admin"
+      "roles": [
+        1
+      ],
+      "permissions": [
+        3
+      ]
     },
     {
       "id": 2,
-      "username": "editor",
-      "password": "editor123",
-      "role": "editor"
+      "name": "Trần Thị B",
+      "email": "user@example.com",
+      "password": "user123",
+      "roles": [
+        2
+      ],
+      "permissions": []
     },
     {
       "id": 3,
-      "username": "viewer",
-      "password": "viewer123",
-      "role": "viewer"
+      "name": "Phạm Văn C",
+      "email": "editor@example.com",
+      "password": "editor123",
+      "roles": [
+        3
+      ],
+      "permissions": [
+        4
+      ]
     }
   ]
 }

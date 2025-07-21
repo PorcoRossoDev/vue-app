@@ -1,20 +1,26 @@
 [
   {
     "id": 1,
-    "username": "admin",
+    "name": "Nguyễn Văn A",
+    "email": "admin@example.com",
     "password": "admin123",
-    "role": "admin"
+    "roles": [1],
+    "permissions": [3]
   },
   {
     "id": 2,
-    "username": "editor",
-    "password": "editor123",
-    "role": "editor"
+    "name": "Trần Thị B",
+    "email": "user@example.com",
+    "password": "user123",
+    "roles": [2],
+    "permissions": []
   },
   {
     "id": 3,
-    "username": "viewer",
-    "password": "viewer123",
-    "role": "viewer"
+    "name": "Phạm Văn C",
+    "email": "editor@example.com",
+    "password": "editor123",
+    "roles": [3],
+    "permissions": [4]
   }
 ]

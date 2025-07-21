@@ -1,0 +1,209 @@
+{
+  "permissions": {
+    "users": [
+      {
+        "action": "view",
+        "name": "VIEW users"
+      },
+      {
+        "action": "view_detail",
+        "name": "VIEW_DETAIL users"
+      },
+      {
+        "action": "create",
+        "name": "CREATE users"
+      },
+      {
+        "action": "update",
+        "name": "UPDATE users"
+      },
+      {
+        "action": "delete",
+        "name": "DELETE users"
+      }
+    ],
+    "roles": [
+      {
+        "action": "view",
+        "name": "VIEW roles"
+      },
+      {
+        "action": "view_detail",
+        "name": "VIEW_DETAIL roles"
+      },
+      {
+        "action": "create",
+        "name": "CREATE roles"
+      },
+      {
+        "action": "update",
+        "name": "UPDATE roles"
+      },
+      {
+        "action": "delete",
+        "name": "DELETE roles"
+      }
+    ],
+    "permissions": [
+      {
+        "action": "view",
+        "name": "VIEW permissions"
+      },
+      {
+        "action": "view_detail",
+        "name": "VIEW_DETAIL permissions"
+      },
+      {
+        "action": "create",
+        "name": "CREATE permissions"
+      },
+      {
+        "action": "update",
+        "name": "UPDATE permissions"
+      },
+      {
+        "action": "delete",
+        "name": "DELETE permissions"
+      }
+    ],
+    "products": [
+      {
+        "action": "view",
+        "name": "VIEW products"
+      },
+      {
+        "action": "view_detail",
+        "name": "VIEW_DETAIL products"
+      },
+      {
+        "action": "create",
+        "name": "CREATE products"
+      },
+      {
+        "action": "update",
+        "name": "UPDATE products"
+      },
+      {
+        "action": "delete",
+        "name": "DELETE products"
+      }
+    ],
+    "posts": [
+      {
+        "action": "view",
+        "name": "VIEW posts"
+      },
+      {
+        "action": "view_detail",
+        "name": "VIEW_DETAIL posts"
+      },
+      {
+        "action": "create",
+        "name": "CREATE posts"
+      },
+      {
+        "action": "update",
+        "name": "UPDATE posts"
+      },
+      {
+        "action": "delete",
+        "name": "DELETE posts"
+      }
+    ]
+  },
+  "posts": [
+    {
+      "id": 1,
+      "title": "Giới thiệu hệ thống phân quyền",
+      "content": "Đây là bài viết giới thiệu tổng quan về hệ thống phân quyền trong ứng dụng.",
+      "authorId": 1,
+      "status": "published",
+      "createdAt": "2025-07-17T09:00:00Z"
+    },
+    {
+      "id": 2,
+      "title": "Phân tích quyền truy cập",
+      "content": "Trong bài viết này, chúng ta sẽ phân tích chi tiết cách cấu trúc permission theo module.",
+      "authorId": 2,
+      "status": "draft",
+      "createdAt": "2025-07-16T14:30:00Z"
+    },
+    {
+      "id": 3,
+      "title": "Hướng dẫn cấu hình JSON Server",
+      "content": "Hướng dẫn cách tạo mock API bằng json-server và cách tách file hiệu quả.",
+      "authorId": 1,
+      "status": "published",
+      "createdAt": "2025-07-15T10:15:00Z"
+    }
+  ],
+  "roles": [
+    {
+      "id": 1,
+      "name": "Admin",
+      "description": "Quản trị toàn bộ hệ thống"
+    },
+    {
+      "id": 2,
+      "name": "Editor",
+      "description": "Chỉnh sửa nội dung"
+    },
+    {
+      "id": 3,
+      "name": "Viewer",
+      "description": "Chỉ xem nội dung"
+    }
+  ],
+  "routes": {
+    "admin": [
+      {
+        "name": "Dashboard",
+        "path": "/dashboard"
+      },
+      {
+        "name": "Users",
+        "path": "/users"
+      },
+      {
+        "name": "Settings",
+        "path": "/settings"
+      }
+    ],
+    "editor": [
+      {
+        "name": "Dashboard",
+        "path": "/dashboard"
+      },
+      {
+        "name": "Posts",
+        "path": "/posts"
+      }
+    ],
+    "viewer": [
+      {
+        "name": "Dashboard",
+        "path": "/dashboard"
+      }
+    ]
+  },
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "admin123",
+      "role": "admin"
+    },
+    {
+      "id": 2,
+      "username": "editor",
+      "password": "editor123",
+      "role": "editor"
+    },
+    {
+      "id": 3,
+      "username": "viewer",
+      "password": "viewer123",
+      "role": "viewer"
+    }
+  ]
+}

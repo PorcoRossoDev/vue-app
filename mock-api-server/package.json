@@ -1,0 +1,13 @@
+{
+  "name": "mock-api-server",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "combine": "node index.js",
+    "serve": "npm run combine && json-server --watch db-combined.json --port 3001"
+  },
+  "dependencies": {
+    "json-server": "^1.0.0-beta.3"
+  }
+}

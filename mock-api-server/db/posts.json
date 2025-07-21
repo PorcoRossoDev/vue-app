@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Giới thiệu hệ thống phân quyền",
+    "content": "Đây là bài viết giới thiệu tổng quan về hệ thống phân quyền trong ứng dụng.",
+    "authorId": 1,
+    "status": "published",
+    "createdAt": "2025-07-17T09:00:00Z"
+  },
+  {
+    "id": 2,
+    "title": "Phân tích quyền truy cập",
+    "content": "Trong bài viết này, chúng ta sẽ phân tích chi tiết cách cấu trúc permission theo module.",
+    "authorId": 2,
+    "status": "draft",
+    "createdAt": "2025-07-16T14:30:00Z"
+  },
+  {
+    "id": 3,
+    "title": "Hướng dẫn cấu hình JSON Server",
+    "content": "Hướng dẫn cách tạo mock API bằng json-server và cách tách file hiệu quả.",
+    "authorId": 1,
+    "status": "published",
+    "createdAt": "2025-07-15T10:15:00Z"
+  }
+]

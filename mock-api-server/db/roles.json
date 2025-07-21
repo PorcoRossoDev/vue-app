@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "name": "Admin",
+    "description": "Quản trị toàn bộ hệ thống"
+  },
+  {
+    "id": 2,
+    "name": "Editor",
+    "description": "Chỉnh sửa nội dung"
+  },
+  {
+    "id": 3,
+    "name": "Viewer",
+    "description": "Chỉ xem nội dung"
+  }
+]

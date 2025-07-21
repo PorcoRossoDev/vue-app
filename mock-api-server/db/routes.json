@@ -1,0 +1,14 @@
+{
+  "admin": [
+    { "name": "Dashboard", "path": "/dashboard" },
+    { "name": "Users", "path": "/users" },
+    { "name": "Settings", "path": "/settings" }
+  ],
+  "editor": [
+    { "name": "Dashboard", "path": "/dashboard" },
+    { "name": "Posts", "path": "/posts" }
+  ],
+  "viewer": [
+    { "name": "Dashboard", "path": "/dashboard" }
+  ]
+}

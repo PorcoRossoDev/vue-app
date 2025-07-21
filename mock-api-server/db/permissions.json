@@ -1,0 +1,37 @@
+{
+  "users": [
+    { "action": "view", "name": "VIEW users" },
+    { "action": "view_detail", "name": "VIEW_DETAIL users" },
+    { "action": "create", "name": "CREATE users" },
+    { "action": "update", "name": "UPDATE users" },
+    { "action": "delete", "name": "DELETE users" }
+  ],
+  "roles": [
+    { "action": "view", "name": "VIEW roles" },
+    { "action": "view_detail", "name": "VIEW_DETAIL roles" },
+    { "action": "create", "name": "CREATE roles" },
+    { "action": "update", "name": "UPDATE roles" },
+    { "action": "delete", "name": "DELETE roles" }
+  ],
+  "permissions": [
+    { "action": "view", "name": "VIEW permissions" },
+    { "action": "view_detail", "name": "VIEW_DETAIL permissions" },
+    { "action": "create", "name": "CREATE permissions" },
+    { "action": "update", "name": "UPDATE permissions" },
+    { "action": "delete", "name": "DELETE permissions" }
+  ],
+  "products": [
+    { "action": "view", "name": "VIEW products" },
+    { "action": "view_detail", "name": "VIEW_DETAIL products" },
+    { "action": "create", "name": "CREATE products" },
+    { "action": "update", "name": "UPDATE products" },
+    { "action": "delete", "name": "DELETE products" }
+  ],
+  "posts": [
+    { "action": "view", "name": "VIEW posts" },
+    { "action": "view_detail", "name": "VIEW_DETAIL posts" },
+    { "action": "create", "name": "CREATE posts" },
+    { "action": "update", "name": "UPDATE posts" },
+    { "action": "delete", "name": "DELETE posts" }
+  ]
+}

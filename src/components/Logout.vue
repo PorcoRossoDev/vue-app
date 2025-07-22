@@ -21,9 +21,9 @@ const router = useRouter()
 const auth = useAuthStore()
 
 const logout = () => {
-    const isLogout = auth.logout(payload)
+    const isLogout = auth.logout()
     if( isLogout ) {
-        //alert('Đăng xuất thành công!')
+        alert('Đăng xuất thành công!')
         router.push('/login')
     } else {
         alert('Đăng xuất thất bại!')

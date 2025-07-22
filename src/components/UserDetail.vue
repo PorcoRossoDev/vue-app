@@ -9,6 +9,6 @@ import getUsers from '../store/users'
 const { users, usersShow } = getUsers();
 
 onMounted = ({
-    usersShow
+    usersShow()
 })
 </script>

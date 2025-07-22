@@ -1,7 +1,7 @@
 // router/index.js
 import { createRouter, createMemoryHistory, createWebHistory } from 'vue-router'
 import { useAuthStore } from '@/store/auth'
-import { ref } from 'vue'
+import { ref, nextTick } from 'vue'
 import { defineStore } from 'pinia'
 
 export const menuRoutes = [
@@ -48,12 +48,18 @@ const router = createRouter({
 })
 
 
-router.beforeEach((to, from, next) => {
+router.beforeEach(async (to, from, next) => {
   const auth = useAuthStore()
-  const isLoggedIn = auth?.isLoggedIn || null
+
+  await nextTick() // cần async ở đây
+
+  const isLoggedIn = auth.isLoggedIn === true
+
   if (!isLoggedIn && to.path !== '/login') {
     alert('Bạn phải đăng nhập để sử dụng.')
     next('/login')
+  } else if( isLoggedIn && to.path == '/login' ) {
+    next('/dashboard')
   } else {
     next()
   }

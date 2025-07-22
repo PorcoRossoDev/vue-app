@@ -5,7 +5,7 @@
 </template>
 <script setup>
 import { onMounted } from 'vue';
-import { getUsers } from '../store/users'
+import getUsers from '../store/users'
 const { users, usersShow } = getUsers();
 
 onMounted = ({
